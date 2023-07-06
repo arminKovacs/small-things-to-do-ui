@@ -15,4 +15,4 @@ Users can add todo items to their google calendar - **Feature idea**
 http://small-things-to-do-api-spec.s3-website-us-east-1.amazonaws.com/
 
 ## Fronted description and notes
-Next.js framework is used for the frontend display.
+Next.js framework is used with Mantine UI library for the frontend display.
