@@ -1,9 +1,11 @@
 /** @type {import('next').NextConfig} */
+const basePath = process.env.BASE_PATH
+
 const nextConfig = {
   output: 'export',
-  basePath: "/small-things-to-do-ui",
+  basePath,
   images: {
-    unoptimized: true,
+    unoptimized: false,
   },
 };
 

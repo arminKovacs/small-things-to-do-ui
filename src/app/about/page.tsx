@@ -1,13 +1,16 @@
-import * as React from 'react';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import NextLink from 'next/link';
-import ProTip from '@/components/ProTip';
-import Copyright from '@/components/Copyright';
+import * as React from 'react'
+import Container from '@mui/material/Container'
+import Typography from '@mui/material/Typography'
+import Box from '@mui/material/Box'
+import Button from '@mui/material/Button'
+import NextLink from 'next/link'
+import ProTip from '@/components/ProTip'
+import Copyright from '@/components/Copyright'
+import { getBasePath } from '@/utilities/common'
 
 export default function About() {
+const basePath = getBasePath()
+
   return (
     <Container maxWidth="lg">
       <Box
@@ -23,7 +26,7 @@ export default function About() {
           Material UI - Next.js example in TypeScript
         </Typography>
         <Box sx={{ maxWidth: 'sm' }}>
-          <Button variant="contained" component={NextLink} href="/">
+          <Button variant="contained" component={NextLink} href={basePath}>
             Go to the home page
           </Button>
         </Box>
@@ -31,5 +34,5 @@ export default function About() {
         <Copyright />
       </Box>
     </Container>
-  );
+  )
 }
