@@ -16,6 +16,9 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  BASE_PATH: ${{ secrets.BASE_PATH }}
+  
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -57,8 +60,6 @@ jobs:
       - name: Lint fix
         run: ${{ steps.detect-package-manager.outputs.runner }} next lint --fix
       - name: Build with Next.js
-        env:
-          BASE_PATH: ${{ secrets.BASE_PATH }}
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
